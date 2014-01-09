@@ -47,11 +47,17 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Code\Camera\CameraController.cs" />
+     <Compile Include="Assets\Code\Freinds\FriendsClick.cs" />
      <Compile Include="Assets\Code\Helper\Helper.cs" />
      <Compile Include="Assets\Code\Helper\test.cs" />
+     <Compile Include="Assets\Code\LeaderBoard\LeaderBoardClick.cs" />
      <Compile Include="Assets\Code\MainPage\MainPageController.cs" />
+     <Compile Include="Assets\Code\MainPage\ShowInstructionsCheck.cs" />
+     <Compile Include="Assets\Code\NewGame\NewGameClick.cs" />
      <Compile Include="Assets\Code\NewPlayer\CreateNewPlayerOKClick.cs" />
      <Compile Include="Assets\Code\NewPlayer\PlayerController.cs" />
+     <Compile Include="Assets\Code\Settings\SettingsClick.cs" />
+     <Compile Include="Assets\Code\Settings\SettingsInstructionsClick.cs" />
      <Compile Include="Assets\NGUI\Scripts\Interaction\LanguageSelection.cs" />
      <Compile Include="Assets\NGUI\Scripts\Interaction\UIButton.cs" />
      <Compile Include="Assets\NGUI\Scripts\Interaction\UIButtonActivate.cs" />

@@ -11,4 +11,16 @@ public class CameraController : MonoBehaviour {
 		c.cullingMask = 1 << i;
 	}
 
+	static public void HideAllBut(string camera, string layer)
+	{
+		
+		CameraController.HideCamera("CameraSettings", "Nothing");
+		CameraController.HideCamera("CameraLeaderboard", "Nothing");
+		CameraController.HideCamera("CameraFriends", "Nothing");
+		CameraController.HideCamera("CameraNewGame", "Nothing");
+		CameraController.HideCamera(camera, layer);
+		Helper.HideStartInstructions();
+
+	}
+
 }

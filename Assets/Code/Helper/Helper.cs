@@ -20,4 +20,25 @@ public class Helper : MonoBehaviour
 		
 	}
 
+	static public void HideStartInstructions()
+	{
+		CameraController.HideCamera("CameraInstructions", "Nothing");
+
+		PlayerPrefs.SetString("ShowInstructions", "false");
+		PlayerPrefs.Save();
+
+		if(!string.IsNullOrEmpty(MainPageController.originalInstructions))
+		{
+			
+			
+			GameObject go = GameObject.Find("lblInstructions");
+			UILabel lbl = go.GetComponent<UILabel>();
+
+			lbl.text = "";
+			lbl.text = MainPageController.originalInstructions;
+		}
+
+
+	}
+
 }

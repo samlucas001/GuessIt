@@ -3,16 +3,41 @@ using System.Collections;
 
 public class MainPageController : MonoBehaviour {
 
+	public static string originalInstructions;
+
 	// Use this for initialization
 	void Start () 
 	{
+		if(PlayerPrefs.GetString("ShowInstructions") == "true")
+		{
+			CameraController.HideCamera("CameraInstructions", "Instructions");
+			
+			GameObject go = GameObject.Find("lblInstructions");
+			UILabel lbl = go.GetComponent<UILabel>();
+			
+			//make sure we keep a copy of the instructions in case we view the start ones, they change to below
+			//we then go and view instructions and OMG they are the cahnged ones we want the original then.
+			originalInstructions = lbl.text;
+
+			print (originalInstructions);
+
+			string totalText = "Welcome to GuessIt.\nThis looks like it is your first time here.\n";
+			totalText = totalText + lbl.text;
+			totalText = totalText + "\nSeeing as though this is your first shot, go ahead and either find a friend or start a game with a random person";
+			
+			lbl.text = totalText;
+		}
 		
+		else
+		{
+			CameraController.HideCamera("CameraInstructions", "Nothing");
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-	
+
 	}
 
 	public static void UpdateUserName()

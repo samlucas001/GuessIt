@@ -76,14 +76,19 @@ public class CreateNewPlayerOKClick : MonoBehaviour
 		string email = Helper.GetLabelText("lbl03Email");
 		string password = Helper.GetPasswordText("txt04Password");
 		string guid = Guid.NewGuid().ToString();
+		string playWith = Helper.GetLabelText("lblPlayWith");
 		allDone = true;
 
-		WWW hs_post = new WWW("http://guessit.azurewebsites.net/AddUser.php?username=" + userName + "&name=" + name + "&email=" + email + "&password=" + password + "&guid=" + guid + "");
+		WWW hs_post = new WWW("http://guessit.azurewebsites.net/AddUser.php?username=" + userName + "&name=" + name + "&email=" + email + "&password=" + password + "&guid=" + guid + "" + "&playWith=" + playWith + "");
 
 		yield return hs_post;
+		
+		
+		PlayerPrefs.SetString("ShowInstructions", "true");
+		PlayerPrefs.Save();
 
 		CameraController.HideCamera("CreateNewPlayerCamera", "Nothing");
-		CameraController.HideCamera("CameraNewResumeGame", "NewResumeGame");			
+		CameraController.HideCamera("CameraHome", "Home");			
 		MainPageController.UpdateUserName();
 	}
 
@@ -98,13 +103,13 @@ public class CreateNewPlayerOKClick : MonoBehaviour
 		if (PlayerPrefs.HasKey("CurrentUserName"))
 		{
 			CameraController.HideCamera("CreateNewPlayerCamera", "Nothing");
-			CameraController.HideCamera("CameraNewResumeGame", "NewResumeGame");			
+			CameraController.HideCamera("CameraHome", "Home");			
 			MainPageController.UpdateUserName();
 		}
 		else
 		{
 			CameraController.HideCamera("CreateNewPlayerCamera", "CreateNewPlayer");
-			CameraController.HideCamera("CameraNewResumeGame", "Nothing");
+			CameraController.HideCamera("CameraHome", "Nothing");
 			//CameraController.HideCamera("CreateNewPlayerCamera", "Nothing");
 			//CameraController.HideCamera("CameraNewResumeGame", "NewResumeGame");	
 		}
@@ -151,10 +156,15 @@ public class CreateNewPlayerOKClick : MonoBehaviour
 			//}
 
 			CameraController.HideCamera("CreateNewPlayerCamera", "Nothing");
-			CameraController.HideCamera("CameraNewResumeGame", "NewResumeGame");
+			CameraController.HideCamera("CameraNewResumeGame", "Home");
 
 			PlayerPrefs.SetString("CurrentUserName", GetLabelValue("lbl01UserName"));
 			PlayerPrefs.Save();
+
+			PlayerPrefs.SetString("ShowInstructions", "true");
+			PlayerPrefs.Save();
+
+
 			MainPageController.UpdateUserName();
 		}
 	}
