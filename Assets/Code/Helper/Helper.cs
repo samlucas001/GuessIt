@@ -41,4 +41,13 @@ public class Helper : MonoBehaviour
 
 	}
 
+	static public void UpdateLabelText(string labelName, string textToAdd)
+	{
+		GameObject go = GameObject.Find(labelName);
+		UILabel lbl = go.GetComponent<UILabel>();
+		lbl.text = textToAdd;
+
+	}
+
+
 }
