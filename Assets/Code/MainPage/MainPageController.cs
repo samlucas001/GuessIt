@@ -4,17 +4,34 @@ using System.Collections;
 public class MainPageController : MonoBehaviour {
 
 	public static string originalInstructions;
+	public Rect windowRect = new Rect(20, 50, 50, 20);
+	public GUISkin guiSkin;
 
-	// Use this for initialization
-	void Start () 
+	void OnGUI()
 	{
-
+		GUI.skin = guiSkin;
+		windowRect = GUI.Window(0, new Rect(20, 200, 290, 100), DoMyWindow, "Are you sure?");
+	
 	}
 	
-	// Update is called once per frame
-	void Update () 
+	void DoMyWindow(int WindowsId)
 	{
+		string userName = "bnalala";
 
+		int padNumber = ((28 - userName.Length) / 2) + userName.Length;
+		userName = userName.PadLeft(padNumber, ' ');
+		print (userName);
+
+		GUI.Label(new Rect(5, 25, 285, 100), "Are you sure you want to add\n" + userName);
+		if(GUI.Button(new Rect(50, 180, 100, 20), "OK"))
+		{
+			print("pressed OK");
+		}
+		if(GUI.Button(new Rect(200, 180, 100, 20), "Cancel"))
+		{
+			print("pressed Cancel");
+		}
+		
 	}
 
 	public static void UpdateUserName()

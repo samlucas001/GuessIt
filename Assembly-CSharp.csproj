@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Code\Camera\CameraController.cs" />
+     <Compile Include="Assets\Code\Freinds\AddFriendClick.cs" />
      <Compile Include="Assets\Code\Freinds\FindFriendClick.cs" />
      <Compile Include="Assets\Code\Freinds\FriendsClick.cs" />
      <Compile Include="Assets\Code\Helper\Helper.cs" />
@@ -57,6 +58,8 @@
      <Compile Include="Assets\Code\NewGame\NewGameClick.cs" />
      <Compile Include="Assets\Code\NewPlayer\CreateNewPlayerOKClick.cs" />
      <Compile Include="Assets\Code\NewPlayer\PlayerController.cs" />
+     <Compile Include="Assets\Code\Objetcs\ButtonPrefabClick.cs" />
+     <Compile Include="Assets\Code\Objetcs\testinit.cs" />
      <Compile Include="Assets\Code\Settings\SettingsClick.cs" />
      <Compile Include="Assets\Code\Settings\SettingsInstructionsClick.cs" />
      <Compile Include="Assets\NGUI\Scripts\Interaction\LanguageSelection.cs" />
