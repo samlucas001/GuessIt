@@ -1,19 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Code\MainPage\MainPageController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Code\Freinds\FriendListClick.cs">
     <Files>
-      <File FileName="Assets\Code\Freinds\FindFriendClick.cs" Line="41" Column="26" />
-      <File FileName="Assets\Code\Helper\Helper.cs" Line="70" Column="2" />
-      <File FileName="Assets\Code\MainPage\MainPageController.cs" Line="22" Column="40" />
-      <File FileName="Assets\Code\Objetcs\ButtonPrefabClick.cs" Line="8" Column="25" />
+      <File FileName="Assets\Code\Freinds\FriendsClick.cs" Line="1" Column="1" />
+      <File FileName="Assets\Code\Freinds\FindFriendClick.cs" Line="1" Column="1" />
+      <File FileName="g:\Unity\Projects\GuessIt\Assets\Code\Freinds\ListFindChange.cs" Line="1" Column="1" />
+      <File FileName="Assets\Code\Objetcs\ButtonPrefabClick.cs" Line="1" Column="1" />
+      <File FileName="Assets\Code\MainPage\MainPageController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Code\Camera\CameraController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Code\Freinds\FriendListClick.cs" Line="11" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="G:\Unity\Projects\GuessIt\Assets\Code\NewPlayer\CreateNewPlayerOKClick.cs" line="544" />
-      <Breakpoint file="G:\Unity\Projects\GuessIt\Assets\Code\Helper\test.cs" line="66" />
-      <Breakpoint file="G:\Unity\Projects\GuessIt\Assets\Code\NewPlayer\CreateNewPlayerOKClick.cs" line="145" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

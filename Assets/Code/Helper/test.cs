@@ -48,7 +48,7 @@ public class test : MonoBehaviour
 	private IEnumerator LoadImage()
 	{
 
-		WWW hs_post = new WWW("http://guessit.azurewebsites.net/ImageView.php?imageId=" + imageId);
+		WWW hs_post = new WWW("http://guessit.azurewebsites.net/__ImageView.php?imageId=" + imageId);
 		yield return hs_post;
 
 		foreach(KeyValuePair<string, string> i in hs_post.responseHeaders)

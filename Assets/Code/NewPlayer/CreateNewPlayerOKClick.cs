@@ -83,7 +83,10 @@ public class CreateNewPlayerOKClick : MonoBehaviour
 
 		yield return hs_post;
 		
-		
+
+		PlayerPrefs.SetString("PlayerGUID", guid);
+		PlayerPrefs.Save();
+
 		PlayerPrefs.SetString("ShowInstructions", "true");
 		PlayerPrefs.Save();
 

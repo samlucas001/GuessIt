@@ -21,8 +21,8 @@ public class FindFriendClick : MonoBehaviour
 
 	void Update()
 	{
-		if(hasBeenClicked)
-		{
+		//if(hasBeenClicked)
+		//{
 			if (searching)
 			{
 				if (Time.time > time)
@@ -44,7 +44,7 @@ public class FindFriendClick : MonoBehaviour
 				}
 			}
 
-		}
+		//}
 
 	}
 
@@ -58,11 +58,10 @@ public class FindFriendClick : MonoBehaviour
 		{
 			//Helper.ChangeButtonState("btnSearchFriends", false);
 
-
 			hasBeenClicked = true;
 			time = Time.time + 0.001f;
-
 			GameObject[] go1;
+
 			go1 = GameObject.FindGameObjectsWithTag("FindAFriendPrefab");
 			
 			for(int i = 0; i < go1.Length; i++)
@@ -100,16 +99,17 @@ public class FindFriendClick : MonoBehaviour
 		if(results != "NONE")
 		{
 			var lines = results.Split("\n"[0]);
-			Helper.UpdateLabelText("lblSearchingFriend", "");
+			//Helper.UpdateLabelText("lblSearchingFriend", "");
 
 			for (int i = 0; i < lines.Length-1; i++)
 			{
 				if(i == 0)
 				{
-					Helper.CloneResource("pnlFriend", "FindAFriendPrefab", 25.0f, "");
+					Helper.CloneResource("pnlFriendRequests", "FindAFriendPrefab", 25.0f, "", 0);
 
 					var tabs = lines[0].Split("\t"[0]);
 					Helper.UpdateLabelText("lblATitle", tabs[1].ToString() + "(" + tabs[2].ToString() + ")");
+					Helper.UpdateLabelText("lblFriendId", tabs[0].ToString());
 				}
 				else
 				{
@@ -117,7 +117,7 @@ public class FindFriendClick : MonoBehaviour
 					var tabs = lines[i].Split("\t"[0]);
 					string labelText = tabs[1].ToString() + "(" + tabs[2].ToString() + ")";
 
-					Helper.CloneResource("pnlFriend", "FindAFriendPrefab", yLoc, labelText);
+					Helper.CloneResource("pnlFriendRequests", "FindAFriendPrefab", yLoc, labelText, int.Parse(tabs[0]));
 				}
 
 			}

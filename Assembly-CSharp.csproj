@@ -49,7 +49,9 @@
      <Compile Include="Assets\Code\Camera\CameraController.cs" />
      <Compile Include="Assets\Code\Freinds\AddFriendClick.cs" />
      <Compile Include="Assets\Code\Freinds\FindFriendClick.cs" />
+     <Compile Include="Assets\Code\Freinds\FriendListClick.cs" />
      <Compile Include="Assets\Code\Freinds\FriendsClick.cs" />
+     <Compile Include="Assets\Code\Freinds\ListFindChange.cs" />
      <Compile Include="Assets\Code\Helper\Helper.cs" />
      <Compile Include="Assets\Code\Helper\test.cs" />
      <Compile Include="Assets\Code\LeaderBoard\LeaderBoardClick.cs" />
@@ -62,6 +64,9 @@
      <Compile Include="Assets\Code\Objetcs\testinit.cs" />
      <Compile Include="Assets\Code\Settings\SettingsClick.cs" />
      <Compile Include="Assets\Code\Settings\SettingsInstructionsClick.cs" />
+     <Compile Include="Assets\ModalDialog\Dialog Scripts\ModalDialog.cs" />
+     <Compile Include="Assets\ModalDialog\Dialog Scripts\MonoSingleton.cs" />
+     <Compile Include="Assets\ModalDialog\Other Scripts\MainSceneGUI.cs" />
      <Compile Include="Assets\NGUI\Scripts\Interaction\LanguageSelection.cs" />
      <Compile Include="Assets\NGUI\Scripts\Interaction\UIButton.cs" />
      <Compile Include="Assets\NGUI\Scripts\Interaction\UIButtonActivate.cs" />

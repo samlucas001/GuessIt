@@ -6,31 +6,36 @@ public class MainPageController : MonoBehaviour {
 	public static string originalInstructions;
 	public Rect windowRect = new Rect(20, 50, 50, 20);
 	public GUISkin guiSkin;
+	public static string userGUID;
+
+	void Start()
+	{
+		Helper.CurrentMenuLocation = (int)Helper.eCurrentMenuLocation.Home;
+		Helper.MoveSomething("lstFindList", -5000);
+		userGUID = PlayerPrefs.GetString("PlayerGUID");
+	}
 
 	void OnGUI()
 	{
-		GUI.skin = guiSkin;
-		windowRect = GUI.Window(0, new Rect(20, 200, 290, 100), DoMyWindow, "Are you sure?");
+		//GUI.skin = guiSkin;
+		//windowRect = GUI.ModalWindow(0, new Rect(15, 200, 300, 120), DoMyWindow, "");
 	
 	}
 	
 	void DoMyWindow(int WindowsId)
 	{
-		string userName = "bnalala";
+		//string userName = "bnalala";
 
-		int padNumber = ((28 - userName.Length) / 2) + userName.Length;
-		userName = userName.PadLeft(padNumber, ' ');
-		print (userName);
+		//GUI.Label(new Rect(6, 25, 285, 100), "Are you sure you want to add\n" + userName);
 
-		GUI.Label(new Rect(5, 25, 285, 100), "Are you sure you want to add\n" + userName);
-		if(GUI.Button(new Rect(50, 180, 100, 20), "OK"))
-		{
-			print("pressed OK");
-		}
-		if(GUI.Button(new Rect(200, 180, 100, 20), "Cancel"))
-		{
-			print("pressed Cancel");
-		}
+		//if(GUI.Button(new Rect(45, 83, 85, 20), "OK"))
+		//{
+		//	print("pressed OK");
+		//}
+		//if(GUI.Button(new Rect(172, 83, 85, 20), "Cancel"))
+		//{
+		//	print("pressed Cancel");
+		//}
 		
 	}
 

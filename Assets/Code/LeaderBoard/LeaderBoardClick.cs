@@ -6,6 +6,7 @@ public class LeaderBoardClick : MonoBehaviour
 
 	void OnClick()
 	{
+		Helper.CurrentMenuLocation = (int)Helper.eCurrentMenuLocation.Leaderboard;
 		CameraController.HideAllBut("CameraLeaderboard", "Leaderboard");
 	}
 

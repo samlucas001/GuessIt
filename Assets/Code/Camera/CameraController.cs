@@ -16,10 +16,12 @@ public class CameraController : MonoBehaviour {
 		
 		CameraController.HideCamera("CameraSettings", "Nothing");
 		CameraController.HideCamera("CameraLeaderboard", "Nothing");
-		CameraController.HideCamera("CameraFriends", "Nothing");
+		CameraController.HideCamera("CameraFriendsRequests", "Nothing");
 		CameraController.HideCamera("CameraNewGame", "Nothing");
+		CameraController.HideCamera("CameraFriendList", "Nothing");
 		CameraController.HideCamera(camera, layer);
 		Helper.HideStartInstructions();
+		Helper.MoveSomething("lstFindList", -5000);
 
 	}
 
